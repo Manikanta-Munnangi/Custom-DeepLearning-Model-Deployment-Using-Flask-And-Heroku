@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        function show_loading() {
+            results = document.getElementById("ish")
+            results.display.inline
+        }
+    </script>
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        .fixed-top {
+            position: -webkit-sticky;
+        }
+
+        .inline {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 25px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 28px;
+            border-radius: 10px;
+        }
+
+        .container-fluid {
+            height: 500px;
+            padding-top: 50px;
+            padding-bottom: 15px;
+        }
+
+        #cent {
+            text-align: center;
+            margin: auto;
+        }
+
+        input[type=file] {
+            display: inline-block;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar-default bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;">CROP</a>
+                <span class="glyphicon glyphicon-leaf"></span>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" style="font-size: x-large;">Manikanta Munnangi</a></li>
+                    <li><a href="https://github.com/Manikanta-Munnangi">
+                            <img src="../static/img/me.png" class="avatar img-responsive">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Second Container -->
+    <div class="container-fluid bg-2 text-center"
+        style="background-repeat: repeat;background-blend-mode: soft-light;background-size:cover;background-clip: border-box;background-image:url(../static/img/farmer.jpg)">
+        <br>
+        <h3 class="margin"
+            style="font-size: 50px;font-weight: bold; color:floralwhite;text-align: center;text-decoration-color: tomato;">
+            Your Plant is Affected By : {{result}}</h3>
+        <a href="https://www.youtube.com/playlist?list=PLTHBCW2_RYXVBRFraxz3Es4HAuEE9uCaH"
+            style="color:white;font-weight: bolder;font-size: 20px;">Check out videos to control</a>
+        <br>
+        <p id="ish"></p>
+        <!-- Third Container (Grid) -->
+        <div class="container-fluid bg-3 text-center">
+            <h2 style="font-weight: bolder;border-radius: 20px;">Few Diseases</h2>
+            <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2>Tomato Leaf Curl</h2>
+                    <div style="height: 10px;"></div>
+                    <img src="../static/img/leafcurl.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <p style="text-align: justify;">Curling tomato leaves may be a sign of a viral infection. Normally
+                        this virus is transmitted
+                        through whiteflies or through infected transplants.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Tomato powerdy</h2>
+                    <div style="height: 10px;"></div>
+                    <img src="../static/img/powerdy.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <p style="text-align: justify;">Caused by the fungus Oidium lycopersicum, is a relatively new
+                        disease in North America that has the potential to affect both field and greenhouse tomato
+                        production.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Tomato stemrot</h2>
+                    <div style="height: 10px;"></div>
+                    <img src="../static/img/stemrot.png" class="img-responsive margin" style="width:93%" height="280px"
+                        alt="Image">
+                    <p style="text-align: justify;">Stem rot, is a fungal disease. It appears sporadically around the
+                        time tomatoes start to flower due
+                        to the favorable conditions that heavy tomato foliage cover creates.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
