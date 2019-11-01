@@ -5,7 +5,3 @@ Keras
 gevent
 h5py
 tensorflow
-sys
-os
-glob
-re
