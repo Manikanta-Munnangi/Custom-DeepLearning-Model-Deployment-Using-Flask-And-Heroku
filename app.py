@@ -1,29 +1,31 @@
 # coding=utf-8
-import sys
-import os
-import glob
 import tensorflow as tf
-import re
 import numpy as np
-
+import keras
+import os
 # Keras
-from keras.models import load_model
+from keras.models import load_model,model_from_json
 from keras.preprocessing import image
 
 # Flask utils
-from flask import Flask, redirect, url_for, request, render_template,send_from_directory
+from flask import Flask, url_for, render_template,request
 from werkzeug.utils import secure_filename
 
 # Define a flask app
 app = Flask(__name__)
 
-# Model saved with Keras model.save()
-Model_path="models/crop.h5"
-global model,graph
-model=load_model(Model_path)
+loaded_json=open("models/crop.json","r")
+loaded_json_read=loaded_json.read()
+loaded_json.close()
+loaded_model=model_from_json(loaded_json_read)
+loaded_model.load_weights("models/crop_weights.h5")
+global graph
 graph=tf.get_default_graph()
 
 
+from keras.preprocessing import image
+import keras
+import numpy as np
 def model_predict(img_path):
     # load image with target size
     img=image.load_img(img_path,target_size=(256,256))
@@ -36,8 +38,11 @@ def model_predict(img_path):
     
     Classes = ["Potato Early_blight","Potato Late_blight","Potato healthy","Tomato Bacterial_spot","Tomato Early_blight","Tomato Late_blight","Tomato Leaf_Mold","Tomato Septoria_leaf_spot","Tomato Spider_mites Two-spotted_spider_mite","Tomato Target_Spot","Tomato Tomato_mosaic_virus","Tomato healthy"]
     with graph.as_default():
-        preds=model.predict_classes(img)
+        opt=keras.optimizers.Adam(lr=0.001)
+        loaded_model.compile(optimizer=opt,loss='categorical_crossentropy',metrics=['accuracy'])
+        preds=loaded_model.predict_classes(img)
         return Classes[int(preds)]
+
 
 @app.route('/', methods=['GET','POST'])
 def index():
@@ -56,7 +61,7 @@ def upload():
         img_path = os.path.join(
             basepath, 'uploads', secure_filename(f.filename))
         f.save(img_path)
-
+    
         # Make prediction
         result=model_predict(img_path)
         
@@ -65,5 +70,5 @@ def upload():
     return None
 
 if __name__ == '__main__':
-     app.run(port=5000, debug=True)
+     app.run()
 
