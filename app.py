@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 import keras
 import os
+
 # Keras
 from keras.models import load_model,model_from_json
 from keras.preprocessing import image
@@ -28,9 +29,7 @@ global graph
 graph=tf.get_default_graph()
 
 
-from keras.preprocessing import image
-import keras
-import numpy as np
+
 def model_predict(img_path):
     # load image with target size
     img=image.load_img(img_path,target_size=(256,256))
