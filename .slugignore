@@ -1,4 +1,4 @@
 # Heres a comment
-/Demo
+*.h5
+*.mp4
 /uploads
-/models
