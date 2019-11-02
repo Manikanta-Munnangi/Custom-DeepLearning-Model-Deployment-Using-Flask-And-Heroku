@@ -1,4 +1,4 @@
-Werkzeug==0.15.3
+Werkzeug==0.16.0
 numpy==1.16.1
 Keras==2.2.4
 gunicorn==19.9.0
