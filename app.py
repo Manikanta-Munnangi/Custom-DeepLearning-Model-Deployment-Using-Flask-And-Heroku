@@ -65,7 +65,7 @@ def upload():
         basepath = os.path.dirname(__file__)
         img_path = os.path.join(
             basepath, 'uploads', secure_filename(f.filename))
-        f.save(img_path)
+        f.save(img_path,"wb")
     
         # Make prediction
         result=model_predict(img_path)
