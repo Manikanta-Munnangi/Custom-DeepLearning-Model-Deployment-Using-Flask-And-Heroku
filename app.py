@@ -9,7 +9,7 @@ from keras.preprocessing import image
 
 # Flask utils
 from flask import Flask, url_for, render_template,request
-from werkzeug.utils import secure_filename
+#from werkzeug.utils import secure_filename
 
 # Define a flask app
 app = Flask(__name__)
