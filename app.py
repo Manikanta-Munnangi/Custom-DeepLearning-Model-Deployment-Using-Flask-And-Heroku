@@ -14,10 +14,15 @@ from werkzeug.utils import secure_filename
 # Define a flask app
 app = Flask(__name__)
 
+# load json file before weights
 loaded_json=open("models/crop.json","r")
+# read json architecture into variable
 loaded_json_read=loaded_json.read()
+# close file
 loaded_json.close()
+# retreive model from json
 loaded_model=model_from_json(loaded_json_read)
+# load weights
 loaded_model.load_weights("models/crop_weights.h5")
 global graph
 graph=tf.get_default_graph()
@@ -71,4 +76,3 @@ def upload():
 
 if __name__ == '__main__':
      app.run()
-
