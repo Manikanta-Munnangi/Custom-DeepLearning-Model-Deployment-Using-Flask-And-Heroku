@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 import keras
 import os
+from PIL import Image
 
 # Keras
 from keras.models import load_model,model_from_json
