@@ -5,4 +5,4 @@ gunicorn==19.9.0
 Flask==1.0.4
 h5py==2.9.0
 tensorflow>=1.12.1
-PIL
+Keras_Applications
