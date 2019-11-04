@@ -7,6 +7,7 @@ import os
 # Keras
 from keras.models import load_model,model_from_json
 from keras.preprocessing import image
+from PIL import Image
 
 # Flask utils
 from flask import Flask, url_for, render_template,request
