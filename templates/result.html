@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             font: 20px Montserrat, sans-serif;
             line-height: 1.8;
+            padding-top: 30px;
+            -ms-overflow-style: navbar !important;
             color: #f5f6f7;
-        }
-
-        .fixed-top {
-            position: -webkit-sticky;
         }
 
         .inline {
@@ -30,7 +29,7 @@
         }
 
         .margin {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .bg-1 {
@@ -63,10 +62,56 @@
             border-radius: 10px;
         }
 
+        #footer-area {
+            padding: 20px 0 20px 0;
+            background: #262626;
+            color: #fff;
+        }
+
+        .single-footer h3 {
+            margin-bottom: 15px;
+            color: #fafafa;
+        }
+
+        .footer-social li a {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+
+        .fa {
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            color: black;
+            border-radius: 50%;
+        }
+
+
         .container-fluid {
-            height: 500px;
-            padding-top: 50px;
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .container-fluid1 {
+            height: auto;
+            padding-top: 100px;
             padding-bottom: 15px;
+        }
+
+        .container-fluid2 {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .container-fluids {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-left: 5px;
+            border-right: 5px;
         }
 
         #cent {
@@ -76,6 +121,13 @@
 
         input[type=file] {
             display: inline-block;
+        }
+
+        .navbar li:hover,
+        :focus {
+            background-color: #fff;
+            color: green;
+            text-decoration: underline;
         }
 
         .navbar {
@@ -93,20 +145,21 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar-default bg-dark navbar-dark fixed-top">
-        <div class="container">
+    <nav class="navbar-default bg-dark navbar-dark navbar-fixed-top">
+        <div class="container-fluids" style="color:black;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;">CROP</a>
-                <span class="glyphicon glyphicon-leaf"></span>
+                <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;color: black;">CROP</a>
+                <span class="glyphicon glyphicon-leaf" style="size: 5px;"></span>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" style="color: black;">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" style="font-size: x-large;">Manikanta Munnangi</a></li>
+                    <li><a href="#Diseases" style="font-size: x-large;color: black;">Few Diseases</a></li>
+                    <li><a href="#Me" style="font-size: x-large;color: black;">About Me</a></li>
                     <li><a href="https://github.com/Manikanta-Munnangi">
                             <img src="../static/img/me.png" class="avatar img-responsive">
                         </a>
@@ -116,52 +169,134 @@
         </div>
     </nav>
 
-
     <!-- Second Container -->
-    <div class="container-fluid bg-2 text-center"
+    <div class="container-fluid bg-2"
         style="background-repeat: repeat;background-blend-mode: soft-light;background-size:cover;background-clip: border-box;background-image:url(../static/img/farmer.jpg)">
         <br>
-        <h3 class="margin"
-            style="font-size: 50px;font-weight: bold; color:floralwhite;text-align: center;text-decoration-color: tomato;">
-            Your Plant is Affected By : {{result}}</h3>
-        <a href="https://www.youtube.com/playlist?list=PLTHBCW2_RYXVBRFraxz3Es4HAuEE9uCaH"
-            style="color:white;font-weight: bolder;font-size: 20px;">Check out videos to control</a>
-        <br>
-        <!-- Third Container (Grid) -->
-        <div class="container-fluid bg-3 text-center">
-            <h2 style="font-weight: bolder;border-radius: 20px;">Few Diseases</h2>
-            <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h2>Tomato Leaf Curl</h2>
-                    <div style="height: 10px;"></div>
-                    <img src="../static/img/leafcurl.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-                    <p style="text-align: justify;">Curling tomato leaves may be a sign of a viral infection. Normally
-                        this virus is transmitted
-                        through whiteflies or through infected transplants.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <h2>Tomato powerdy</h2>
-                    <div style="height: 10px;"></div>
-                    <img src="../static/img/powerdy.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-                    <p style="text-align: justify;">Caused by the fungus Oidium lycopersicum, is a relatively new
-                        disease in North America that has the potential to affect both field and greenhouse tomato
-                        production.</p>
-                </div>
-                <div class="col-sm-4">
-                    <h2>Tomato stemrot</h2>
-                    <div style="height: 10px;"></div>
-                    <img src="../static/img/stemrot.png" class="img-responsive margin" style="width:93%" height="280px"
-                        alt="Image">
-                    <p style="text-align: justify;">Stem rot, is a fungal disease. It appears sporadically around the
-                        time tomatoes start to flower due
-                        to the favorable conditions that heavy tomato foliage cover creates.
-
-                    </p>
+        <h3
+            style="font-size: 45px;font-weight: bold; color:floralwhite;text-align: center;text-decoration-color: tomato;">
+            Your Plant is Affected With : {{result}}</h4>
+            <br>
+    </div>
+    <br>
+    <div class="container bg-3" style="color: black;text-align: justify;">
+        <div class="row">
+            <div class="col-md-7" style="font-size:inherit">
+                <h1 style="font-weight: 20px;"> Casued By Pathogen </h1>
+                <p style="font-weight: 15px;">{{Pathogen}} </p>
+                <h1 style="font-weight: 20px;"> Symptoms of Affected plant</h1>
+                <p style="font-weight: 15px;">{{Symptoms}} </p>
+                <h1 style="font-weight: 20px;"> Management </h1>
+                <p style="font-weight: 15px;">{{Management}} </p>
+            </div>
+            <br>
+            <div class="col-md-5" style="text-align: center;">
+                <img src="{{ url_for('send_file', filename=filee)}}" class="img-responsive"
+                    style="width: 100%;height: 300px;border-radius: 10px;outline-color: black;" alt="Image">
+                <br>
+                <p style="text-align: justify;font-weight: bolder;"> Doesn't make sense with chemical explanations hit
+                    below button for practical understanding with videos </p>
+                <a type="button" class="btn"
+                    style="border-radius: 10px;widows: 100%;border-color: green;color:black;background-color: white;font-weight: bolder;"
+                    href="https://www.youtube.com/playlist?list=PLTHBCW2_RYXVBRFraxz3Es4HAuEE9uCaH" target="_blank">
+                    Youtube Videos
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center">
+            <a type="button" class="btn"
+            style="border-radius: 10px;widows: 100%;border-color: green;color:black;background-color: white;font-weight: bolder;"
+            href="{{ url_for('index') }}">
+            Try With Other Image</a>
+    </div>
+    <!-- Third Container (Grid) -->
+    <div class="container-fluid bg-3 text-center" style="border-radius: 20px;color: black;">
+        <div class="card">
+        </div>
+        <h2 style="font-weight: bolder;border-radius: 20px;">Few Diseases</h2>
+        <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
+        <div class="row" id="Diseases">
+            <div class="col-sm-4">
+                <h2>Tomato Leaf Curl</h2>
+                <div style="height: 10px;"></div>
+                <img src="../static/img/leafcurl.jpg" class="img-responsive margin"
+                    style="width:100%;border-radius: 10px;" alt="Image">
+                <p style="text-align: justify;">Curling tomato leaves may be a sign of a viral infection. Normally
+                    this virus is transmitted
+                    through whiteflies or through infected transplants.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Tomato powerdy</h2>
+                <div style="height: 10px;"></div>
+                <img src="../static/img/powerdy.jpg" class="img-responsive margin"
+                    style="width:100%;border-radius: 10px;" alt="Image">
+                <p style="text-align: justify;">Caused by the fungus Oidium lycopersicum, is a relatively new
+                    disease in North America that has the potential to affect both field and greenhouse tomato
+                    production.</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Tomato stemrot</h2>
+                <div style="height: 10px;"></div>
+                <img src="../static/img/stemrot.png" class="img-responsive margin"
+                    style="width:100%;border-radius: 10px; height:280px;" alt="Image">
+                <p style="text-align: justify;">Stem rot, is a fungal disease. It appears sporadically around the
+                    time tomatoes start to flower due
+                    to the favorable conditions that heavy tomato foliage cover creates.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Last Container-->
+    <div class="container-fluid2 " style="color: black;" id="Me">
+        <h2 style="font-weight: bolder;border-radius: 20px;text-align: center;">About Me</h2>
+        <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
+        <div style="color: black;">
+            <div id="footer-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="single-footer">
+                                <h1 style="font-size: 30px;font-weight: bolder;letter-spacing: 3px;">Disease Info
+                                    Credits</h1>
+                                <a href="https://plantvillage.psu.edu/plants" target="_blank"
+                                    style="color: white;font-weight: bolder;text-align: center;">==== @plant village
+                                    ====</a>
+                                <p style="font-size: px;text-align: justify;"> It is an open, freely available resource
+                                    that helps you
+                                    solve all your plant related questions</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="single-footer">
+                                <h1 style="font-weight: bolder;font-size: 30px;letter-spacing: 4px;">Manikanta Munnangi
+                                </h1>
+                                <p style="text-align: justify;"> I'm passionate towards Data science, Machine & Deep
+                                    Learning domains
+                                    and love to learn new technologies related to data science. </p>
+                                <ul class="footer-social list-inline">
+                                    <li><a href="https://www.linkedin.com/in/manikanta-reddy-munnangi-2402b7107/"
+                                            target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://github.com/Manikanta-Munnangi" target="_blank"><i
+                                                class="fa fa-github"></i></a>
+                                    </li>
+                                    <li><a href="https://medium.com/@manimannu93" target="_blank"><i
+                                                class="fa fa-rss"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-footer">
+                                <img src="static/img/me.png" style="border-radius: 10px;" class="photo">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

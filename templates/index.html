@@ -1,25 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Crop: A Plant Disease Identifier</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+    });
+    
+  </script>
   <style>
     body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
+      padding-top: 0px;
       color: #f5f6f7;
-    }
-
-    .fixed-top {
-      position: -webkit-sticky;
     }
 
     .inline {
@@ -33,6 +39,13 @@
 
     .margin {
       margin-bottom: 25px;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: darkslategrey;
+      color: white;
+      text-align: center;
     }
 
     .bg-1 {
@@ -65,10 +78,72 @@
       border-radius: 10px;
     }
 
+    .navbar li:hover,
+    :focus {
+      background-color: #fff;
+      color: green;
+      text-decoration: underline;
+    }
+
+    #footer-area {
+      padding: 20px 0 20px 0;
+      background: #262626;
+      color: #fff;
+    }
+
+    .single-footer h3 {
+      margin-bottom: 15px;
+      color: #fafafa;
+    }
+
+    .footer-social li a {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+    }
+
+    .fa {
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      color: black;
+      border-radius: 50%;
+    }
+
+    .photo {
+      border-radius: 20px;
+
+    }
+
     .container-fluid {
-      height: 500px;
-      padding-top: 50px;
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+
+    .container-fluid1 {
+      height: auto;
+      padding-top: 100px;
       padding-bottom: 15px;
+    }
+
+    .container-fluid2 {
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+
+    .container-fluids {
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-left: 5px;
+      border-right: 5px;
+    }
+
+    .navbar-fixed-top.scrolled {
+      background-color: whitesmoke !important;
+      transition: background-color 10ms;
     }
 
     #cent {
@@ -79,38 +154,30 @@
     input[type=file] {
       display: inline-block;
     }
-
-    .navbar {
-      padding-top: 35px;
-      padding-bottom: 25px;
-      border: 10px;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-    }
   </style>
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar-default bg-dark navbar-dark fixed-top">
-    <div class="container">
+  <nav class="navbar-default navbar-fixed-top navbar-expand-lg  navbar-dark" style="background-color: transparent;">
+    <div class="container-fluids" style="color:black;">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;">CROP</a>
-        <span class="glyphicon glyphicon-leaf"></span>
+        <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;color: black;">CROP</a>
+        <span class="glyphicon glyphicon-leaf" style="size: 5px;"></span>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" style="font-size: x-large;">Manikanta Munnangi</a></li>
+      <div class="collapse navbar-collapse" id="myNavbar" style="color: black; scrollbar-highlight-color: green;">
+        <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
+          <li><a href="#Do" style="font-size: x-large;color: black;">Do's & Don'ts</a></li>
+          <li><a href="#Diseases" style="font-size: x-large;color: black;">Few Diseases</a></li>
+          <li><a href="#Me" style="font-size: x-large;color: black;">About Me</a></li>
           <li><a href="https://github.com/Manikanta-Munnangi">
-              <img src="../static/img/me.png" class="avatar img-responsive">
+              <img src="../static/img/me.png" class="avatar img-fluid">
             </a>
           </li>
         </ul>
@@ -119,68 +186,137 @@
   </nav>
 
 
-  <!-- Second Container -->
-  <div class="container-fluid bg-2 text-center"
+  <!-- First Container -->
+  <div class="container-fluid1 bg-2 text-center"
     style="background-repeat: repeat;background-blend-mode: soft-light;background-size:cover;background-clip: border-box;background-image:url(../static/img/farmer.jpg)">
     <br>
-    <h3 class="margin"
-      style="font-size: 50px;font-weight: bold; color:floralwhite;text-align: center;text-decoration-color: tomato;">
+    <br>
+    <h3 style="font-size: 50px;font-weight: bold; color:floralwhite;text-align: center;text-underline-position: auto;">
       Plant Disease
       Identifier</h3>
     <br>
-    <p style="font-weight: bold;font-size: 20px; color:floralwhite;text-align: unset;"> Want to know what type of
+    <p style="font-weight: bold;font-size: 22px; color:white;text-align: center;"> Want to know what type of
       disease your plant affected with,then Upload a images of (Tomato, Potato) plants and get to know the disease it
       posses and the remedies and pratical video explanation to prevent further loss of plants. </p>
     <br>
     <a href="#collapseExample" data-toggle="collapse" class="btn btn-default btn-lg"
-      style="border-radius: 10px;width: 150px;border-color: black;border-width: 1px;border-style: groove ;">
-      <span class="glyphicon glyphicon-leaf"></span> Start Here 
+      style="border-radius: 10px;width: 150px;border-color: black;border-width: 1px;color: black;border-style: groove ;">
+      <span class="glyphicon glyphicon-leaf"></span> Start Here
     </a>
+    <br>
+    <br>
+    <p style="color:limegreen;font-weight: bolder;text-align: center;font-size: 30px;">{{Error}}</p>
     <div class="collapse" id="collapseExample">
       <div class="card card-body">
         <form action="/predict" method="POST" enctype="multipart/form-data">
-          <br>
-            <input type="file" class="btn" name="image" style="font-size: 20px;font-weight: bolder;color: black;border-radius: 10px;" accept="image/*">
-            <input type="submit" onclick="show_loading()" class="btn" style="font-size: 20px;font-weight: bolder;color: black;border-radius: 10px;">
+          <input type="file" class="btn" name="image"
+            style="font-size: 20px;font-weight: bolder;color: black;border-radius: 10px;" accept="image/*" required>
+          <input type="submit" class="btn" 
+            style="font-size: 20px;font-weight: bolder;color: black;border-radius: 10px;">
         </form>
       </div>
     </div>
   </div>
-  <p id="ish"></p>
-  <!-- Third Container (Grid) -->
-  <div class="container-fluid bg-3 text-center">
-      <h2 style="font-weight: bolder;border-radius: 20px;">Few Diseases</h2>
-      <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
-      <div class="row">
-          <div class="col-sm-4">
-              <h2>Tomato Leaf Curl</h2>
-              <div style="height: 10px;"></div>
-              <img src="../static/img/leafcurl.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-              <p style="text-align: justify;">Curling tomato leaves may be a sign of a viral infection. Normally
-                  this virus is transmitted
-                  through whiteflies or through infected transplants.
-              </p>
-          </div>
-          <div class="col-sm-4">
-              <h2>Tomato powerdy</h2>
-              <div style="height: 10px;"></div>
-              <img src="../static/img/powerdy.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-              <p style="text-align: justify;">Caused by the fungus Oidium lycopersicum, is a relatively new
-                  disease in North America that has the potential to affect both field and greenhouse tomato
-                  production.</p>
-          </div>
-          <div class="col-sm-4">
-              <h2>Tomato stemrot</h2>
-              <div style="height: 10px;"></div>
-              <img src="../static/img/stemrot.png" class="img-responsive margin" style="width:93%" height="280px"
-                  alt="Image">
-              <p style="text-align: justify;">Stem rot, is a fungal disease. It appears sporadically around the
-                  time tomatoes start to flower due
-                  to the favorable conditions that heavy tomato foliage cover creates.
-
-              </p>
-          </div>
+  <!--Second Container-->
+  <div class="container-fluid bg-3 text-center" style="color: black;">
+    <h2 style="font-weight: bolder;border-radius: 20px;">Do's & Don'ts</h2>
+    <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;display: block;">
+    <div class="row" id="Do">
+      <div class="col-sm-6">
+        <h2>Do's</h2>
+        <div style="height: 10px;"></div>
+        <img src="../static/img/one_leaf.png" class="img-fluid margin"
+          style="width:100%;height:400px;border-radius: 10px;display:block " alt="Image">
+        <p style="text-align: center;font-weight: bolder;">The Algorithm works well with single leaf at a time, so try
+          uploading images with one leaf
+        </p>
       </div>
+      <div class="col-sm-6">
+        <h2>Don'ts</h2>
+        <div style="height: 10px;"></div>
+        <img src="../static/img/more_leaves.jpg" class="img-fluid margin"
+          style="width:100%;height:400px;border-radius: 10px;display: block;" alt="Image">
+        <p style="text-align: center;font-weight: bolder;">The Algorithm won't predict when more leaves in one image, it
+          is good at predicting one leaf at a time </p>
+      </div>
+    </div>
+  </div>
+  <!-- Third Container (Grid) -->
+  <div class="container-fluid bg-3 text-center" style="color: black;">
+    <h2 style="font-weight: bolder;border-radius: 20px;">Few Diseases</h2>
+    <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
+    <div class="row" id="Diseases">
+      <div class="col-sm-4">
+        <h2>Tomato Leaf Curl</h2>
+        <div style="height: 10px;"></div>
+        <img src="../static/img/leafcurl.jpg" class="img-fluid margin"
+          style="width:100%;height:auto;border-radius: 10px;" alt="Image">
+        <p style="text-align: justify">Curling tomato leaves may be a sign of a viral infection. Normally
+          this virus is transmitted
+          through whiteflies or through infected transplants.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Tomato powerdy</h2>
+        <div style="height: 10px;"></div>
+        <img src="../static/img/powerdy.jpg" class="img-fluid margin" style="width:100%;border-radius: 10px;"
+          alt="Image">
+        <p style="text-align: justify;">Caused by the fungus Oidium lycopersicum, is a relatively new
+          disease in North America that has the potential to affect both field and greenhouse tomato
+          production.</p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Tomato stemrot</h2>
+        <div style="height: 10px;"></div>
+        <img src="../static/img/stemrot.png" class="img-fluid margin"
+          style="width:100%;height:280px;border-radius: 10px;" alt="Image">
+        <p style="text-align: justify;">Stem rot, is a fungal disease. It appears sporadically around the
+          time tomatoes start to flower due
+          to the favorable conditions that heavy tomato foliage cover creates.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Last Container-->
+  <div class="container-fluid2 " style="color: black;" id="Me">
+    <h2 style="font-weight: bolder;border-radius: 20px;text-align: center;">About Me</h2>
+    <hr style="border: 5px solid darkslategrey; border-radius: 20px;width: 150px;">
+    <div style="color: black;">
+      <div id="footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="single-footer">
+                <h1 style="font-size: 30px;font-weight: bolder;letter-spacing: 3px;">Disease Info Credits</h1>
+                <a href="https://plantvillage.psu.edu/plants" target="_blank"
+                  style="color: white;font-weight: bolder;text-align: center;">==== @plant village ====</a>
+                <p style="font-size: px;text-align: justify;"> It is an open, freely available resource that helps you
+                  solve all your plant related questions</p>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="single-footer">
+                <h1 style="font-weight: bolder;font-size: 30px;letter-spacing: 4px;">Manikanta Munnangi</h1>
+                <p style="text-align: justify;"> I'm passionate towards Data science, Machine & Deep Learning domains
+                  and love to learn new technologies related to data science. </p>
+                <ul class="footer-social list-inline">
+                  <li><a href="https://www.linkedin.com/in/manikanta-reddy-munnangi-2402b7107/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://github.com/Manikanta-Munnangi" target="_blank"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li><a href="https://medium.com/@manimannu93" target="_blank"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="single-footer">
+                <img src="static/img/me.png" class="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
