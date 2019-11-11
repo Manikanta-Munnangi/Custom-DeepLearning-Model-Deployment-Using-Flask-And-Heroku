@@ -1,8 +1,9 @@
 # Keras-Custom-Model-Deployment-Using-Flask-And-Heroku.
 
-- Basic Guide to land your Machine Learning or Deep Learning Model to production Using the popular web framework Flask and   Heroku is a cloud platform to helps you to deploy without much hassle.
-
-**Demo of my project build with flask and deployed using Heroku.**
+- Basic Guide to land your Machine Learning or Deep Learning Model to production Using the popular web framework Flask and   Heroku is a cloud platform to helps you to deploy without much hassle. 
+- You can find step-by-step detailed explanation in my medium blog
+[Here](https://medium.com/@manimannu93/everything-from-your-deep-learning-model-to-a-web-app-279cd733f3d4)
+- Look Demo of my project build with flask and deployed using Heroku.
 <p align="center">
  <img src="https://github.com/Manikanta-Munnangi/Keras-Custom-Model-Deployment-Using-Flask-And-Heroku/blob/master/Demo/crop.gif" width:100%; height=500px>
 </p>
