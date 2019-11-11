@@ -6,7 +6,7 @@
 
 **See Demo of my project build with flask and deployed using Heroku.**
 <p align="center">
- <img src="https://github.com/Manikanta-Munnangi/Keras-Custom-Model-Deployment-Using-Flask-And-Heroku/blob/master/Demo/cropify.gif" width:500px; height=500px>
+ <img src="https://github.com/Manikanta-Munnangi/Keras-Custom-Model-Deployment-Using-Flask-And-Heroku/blob/master/Demo/cropify.gif" width:400px; height:400px>
 </p>
 
 # Introduction.
