@@ -6,7 +6,7 @@
 
 **See Demo of my project build with flask and deployed using Heroku.**
 <p align="center">
- <img src="" width:400px; height:400px>
+ <img src="https://github.com/Manikanta-Munnangi/Custom-DeepLearning-Model-Deployment-Using-Flask-And-Heroku/blob/master/Demo/crope.gif" width:1280px; height:600px>
 </p>
 
 # Introduction.
